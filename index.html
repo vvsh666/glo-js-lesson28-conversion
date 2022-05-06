@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <div class="wrapper">
+            <h1>Конвертер валют (RUB <-> USD, RUB <-> EUR)</h1>
+            <form action="" name="form1" id="form1">
+                <div class="radio-box">
+                    <label for="usd"><input type="radio" name="cur" value="usd" checked>USD</label>
+                    <label for="eur"><input type="radio" name="cur" value="eur">EUR</label>
+                </div>
+                <div class="input-box">
+                    <input type="text" name="first">
+                    <label for="first" name="first">Рубль, RUB</label>
+                </div>
+                <button class="change-direction">Change</button>
+                <div class="input-box">
+                    <input type="text" name="second" disabled>
+                    <label for="second" name="second">Доллар, USD</label>
+                </div>
+                <input type="submit" value="Конвертировать">
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>
