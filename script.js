@@ -27,14 +27,13 @@ const getData = async (from, to, amount) => {
     }
 }
 
-// const clearInputs = () => {
-//     inputs.forEach(input => {
-//         input.value = ''
-//     })
-// }
+const clearOutput = () => {
+    inputs[1].value = ''
+}
 
 radios.forEach((radio) => {
     radio.addEventListener('change', (e) => {
+        clearOutput()
         labelInputs.forEach((label) => {
             if (label.closest('.money')) {
                 if (e.target.value === 'eur') {
@@ -50,6 +49,7 @@ radios.forEach((radio) => {
 
 changeBtn.addEventListener('click', (e) => {
     e.preventDefault()
+    clearOutput()
 
     inputBoxes.forEach((item) => {
         item.classList.toggle('money')
@@ -61,6 +61,7 @@ changeBtn.addEventListener('click', (e) => {
 
 form.addEventListener('submit', (e) => {
     e.preventDefault()
+    clearOutput()
     const amount = form.querySelector('input[name="first"]').value
     let from, to
     if (!inputBoxes[0].classList.contains('money')) {
